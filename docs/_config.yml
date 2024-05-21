@@ -132,7 +132,7 @@ footer:
       # url:
     - label: "Project Home"
       icon: "fas fa-fw fa-link"
-      url: "https://github.com/TomNisbet/TommyPROM"
+      url: "https://github.com/The8BitEnthusiast/65c02-soc"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
