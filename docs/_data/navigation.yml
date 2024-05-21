@@ -1,0 +1,7 @@
+# main links
+docs:
+  - title: "Introduction"
+    children:
+      - title: "What is the 6502 SoC Project?"
+        url: /
+  
