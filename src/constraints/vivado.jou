@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Jul 20 17:52:10 2024
+# Process ID: 140998
+# Current directory: /home/steeve/projects/65c02-soc/src/constraints
+# Command line: vivado
+# Log file: /home/steeve/projects/65c02-soc/src/constraints/vivado.log
+# Journal file: /home/steeve/projects/65c02-soc/src/constraints/vivado.jou
+# Running On: spock, OS: Linux, CPU Frequency: 3457.851 MHz, CPU Physical cores: 4, Host memory: 8317 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/steeve/projects/65c02-soc/vivado/65c02-soc.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+add_files -norecurse /home/steeve/projects/65c02-soc/src/hdl/ram.v
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_hello ]
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/WE}} 
+relaunch_sim
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_design

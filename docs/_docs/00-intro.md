@@ -12,8 +12,6 @@ Features include:
 * Arlet Otten's [65C02 soft core](https://github.com/Arlet/verilog-65C02-microcode) as the microprocessor
 * A memory mapped I/O subsystem that includes the following I/O cores:
     * An emulated 65C22 Versatile Interface Adapter (VIA)
-    * PS/2 keyboard interface
-    * The Apple 1 video display terminal
     * Serial interface (code compatible with the 65C51 ACIA)
 
 ## Design

@@ -1,0 +1,481 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Jul 20 17:52:10 2024
+# Process ID: 140998
+# Current directory: /home/steeve/projects/65c02-soc/src/constraints
+# Command line: vivado
+# Log file: /home/steeve/projects/65c02-soc/src/constraints/vivado.log
+# Journal file: /home/steeve/projects/65c02-soc/src/constraints/vivado.jou
+# Running On: spock, OS: Linux, CPU Frequency: 3457.851 MHz, CPU Physical cores: 4, Host memory: 8317 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/steeve/projects/65c02-soc/vivado/65c02-soc.xpr
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-20:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/arty-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-10:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/cora-z7-10/B.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/eclypse-z7/A.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/eclypse-z7/B.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/genesys-zu-3eg/B.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/genesys-zu-3eg/D.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_5ev:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/genesys-zu-5ev/C.0/board.xml as part xczu5ev-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/steeve/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/steeve/projects/65c02-soc/vivado/65c02-soc.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/steeve/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:41 ; elapsed = 00:00:22 . Memory (MB): peak = 6543.230 ; gain = 309.566 ; free physical = 2523 ; free virtual = 8948
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/steeve/projects/65c02-soc/vivado/65c02-soc.srcs/utils_1/imports/synth_1/top.dcp with file /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/top.dcp
+launch_runs synth_1 -jobs 2
+[Sat Jul 20 17:53:29 2024] Launched synth_1...
+Run output will be captured here: /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tftg256-1
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6864.977 ; gain = 0.000 ; free physical = 2283 ; free virtual = 8709
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Finished Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6961.508 ; gain = 0.000 ; free physical = 2175 ; free virtual = 8602
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 7083.969 ; gain = 468.148 ; free physical = 2061 ; free virtual = 8483
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a35tftg256-1
+Top: top
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/steeve/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7656.941 ; gain = 242.957 ; free physical = 1474 ; free virtual = 7905
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/steeve/projects/65c02-soc/src/hdl/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v:6]
+INFO: [Synth 8-6157] synthesizing module 'abl' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'abl' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v:8]
+INFO: [Synth 8-6157] synthesizing module 'abh' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'abh' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v:6]
+INFO: [Synth 8-6157] synthesizing module 'alu' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:226]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:237]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:248]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:275]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:288]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ctl' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v:38]
+INFO: [Synth 8-6157] synthesizing module 'microcode' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v:1]
+INFO: [Synth 8-3876] $readmem data file 'microcode.data' is read successfully [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'microcode' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ctl' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v:38]
+WARNING: [Synth 8-7071] port 'ld_m' of module 'ctl' is unconnected for instance 'ctl' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:156]
+WARNING: [Synth 8-7023] instance 'ctl' of module 'ctl' has 18 connections declared, but only 17 given [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:156]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rom' [/home/steeve/projects/65c02-soc/src/hdl/rom.v:1]
+INFO: [Synth 8-3876] $readmem data file 'hello.mem' is read successfully [/home/steeve/projects/65c02-soc/src/hdl/rom.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/rom.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/top.v:1]
+WARNING: [Synth 8-3848] Net ld_m in module/entity ctl does not have driver. [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v:52]
+WARNING: [Synth 8-7129] Port ld_m in module ctl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port flag_op[0] in module alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug in module cpu is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7744.910 ; gain = 330.926 ; free physical = 1544 ; free virtual = 7975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7762.723 ; gain = 348.738 ; free physical = 1544 ; free virtual = 7975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7762.723 ; gain = 348.738 ; free physical = 1544 ; free virtual = 7975
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7762.723 ; gain = 0.000 ; free physical = 1542 ; free virtual = 7973
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Finished Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7858.445 ; gain = 0.000 ; free physical = 1473 ; free virtual = 7904
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 7892.457 ; gain = 478.473 ; free physical = 1407 ; free virtual = 7838
+28 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 7892.457 ; gain = 478.473 ; free physical = 1407 ; free virtual = 7838
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Finished Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 7919.328 ; gain = 20.875 ; free physical = 1435 ; free virtual = 7852
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/steeve/projects/65c02-soc/vivado/65c02-soc.srcs/utils_1/imports/synth_1/top.dcp with file /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/top.dcp
+launch_runs synth_1 -jobs 2
+[Sat Jul 20 18:08:03 2024] Launched synth_1...
+Run output will be captured here: /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/runme.log
+refresh_design
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/steeve/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7976.875 ; gain = 21.871 ; free physical = 1217 ; free virtual = 7644
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/steeve/projects/65c02-soc/src/hdl/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:8]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v:6]
+INFO: [Synth 8-6157] synthesizing module 'abl' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'abl' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v:8]
+INFO: [Synth 8-6157] synthesizing module 'abh' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'abh' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v:6]
+INFO: [Synth 8-6157] synthesizing module 'alu' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:226]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:237]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:248]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:275]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:288]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ctl' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v:38]
+INFO: [Synth 8-6157] synthesizing module 'microcode' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v:1]
+INFO: [Synth 8-3876] $readmem data file 'microcode.data' is read successfully [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'microcode' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ctl' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v:38]
+WARNING: [Synth 8-7071] port 'ld_m' of module 'ctl' is unconnected for instance 'ctl' [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:156]
+WARNING: [Synth 8-7023] instance 'ctl' of module 'ctl' has 18 connections declared, but only 17 given [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:156]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rom' [/home/steeve/projects/65c02-soc/src/hdl/rom.v:1]
+INFO: [Synth 8-3876] $readmem data file 'hello.mem' is read successfully [/home/steeve/projects/65c02-soc/src/hdl/rom.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/rom.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/steeve/projects/65c02-soc/src/hdl/top.v:1]
+WARNING: [Synth 8-3848] Net ld_m in module/entity ctl does not have driver. [/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v:52]
+WARNING: [Synth 8-7129] Port ld_m in module ctl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port flag_op[0] in module alu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug in module cpu is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 8077.844 ; gain = 122.840 ; free physical = 1260 ; free virtual = 7687
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 8086.750 ; gain = 131.746 ; free physical = 1260 ; free virtual = 7687
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 8086.750 ; gain = 131.746 ; free physical = 1260 ; free virtual = 7687
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8087.750 ; gain = 0.000 ; free physical = 1329 ; free virtual = 7756
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Finished Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 8090.754 ; gain = 135.750 ; free physical = 1285 ; free virtual = 7704
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/steeve/projects/65c02-soc/vivado/65c02-soc.srcs/utils_1/imports/synth_1/top.dcp with file /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/top.dcp
+launch_runs synth_1 -jobs 2
+[Sat Jul 20 18:21:43 2024] Launched synth_1...
+Run output will be captured here: /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/runme.log
+close_design
+add_files -norecurse /home/steeve/projects/65c02-soc/src/hdl/ram.v
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_hello ]
+Command: launch_simulation  -simset sim_hello
+INFO: [Vivado 12-12493] Simulation top is 'cpu_hello_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_hello'
+INFO: [SIM-utils-72] Using boost library from '/home/steeve/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_hello_tb' in fileset 'sim_hello'...
+INFO: [SIM-utils-43] Exported '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/hello.mem'
+INFO: [SIM-utils-43] Exported '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/microcode.data'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_hello'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+xvlog --incr --relax -L uvm -prj cpu_hello_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abh
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module microcode
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+ERROR: [VRFC 10-3000] 'ram' is not valid in an expression [/home/steeve/projects/65c02-soc/src/hdl/ram.v:27]
+ERROR: [VRFC 10-8530] module 'ram' is ignored due to previous errors [/home/steeve/projects/65c02-soc/src/hdl/ram.v:1]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -simset [get_filesets sim_hello ]
+Command: launch_simulation  -simset sim_hello
+INFO: [Vivado 12-12493] Simulation top is 'cpu_hello_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_hello'
+INFO: [SIM-utils-72] Using boost library from '/home/steeve/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_hello_tb' in fileset 'sim_hello'...
+INFO: [SIM-utils-43] Exported '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/hello.mem'
+INFO: [SIM-utils-43] Exported '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/microcode.data'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_hello'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+xvlog --incr --relax -L uvm -prj cpu_hello_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abh
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module abl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module microcode
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/steeve/projects/65c02-soc/src/hdl/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_hello_tb_behav xil_defaultlib.cpu_hello_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/steeve/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_hello_tb_behav xil_defaultlib.cpu_hello_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v" Line 8. Module cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v" Line 6. Module regfile doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v" Line 8. Module abl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v" Line 6. Module abh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v" Line 11. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v" Line 38. Module ctl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v" Line 1. Module microcode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/rom.v" Line 1. Module rom doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/ram.v" Line 1. Module ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/cpu.v" Line 8. Module cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/regfile.v" Line 6. Module regfile doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abl.v" Line 8. Module abl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/abh.v" Line 6. Module abh doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/alu.v" Line 11. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/ctl.v" Line 38. Module ctl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/65c02-generic/microcode.v" Line 1. Module microcode doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/rom.v" Line 1. Module rom doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/steeve/projects/65c02-soc/src/hdl/ram.v" Line 1. Module ram doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.abl
+Compiling module xil_defaultlib.abh
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.microcode
+Compiling module xil_defaultlib.ctl
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.cpu_hello_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_hello_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_hello_tb_behav -key {Behavioral:sim_hello:Functional:cpu_hello_tb} -tclbatch {cpu_hello_tb.tcl} -view {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_hello_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 8194.984 ; gain = 31.199 ; free physical = 1370 ; free virtual = 7760
+current_wave_config {cpu_hello_tb_behav.wcfg}
+cpu_hello_tb_behav.wcfg
+add_wave {{/cpu_hello_tb/DUT/WE}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_hello -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cpu_hello_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_hello'
+INFO: [SIM-utils-72] Using boost library from '/home/steeve/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_hello_tb' in fileset 'sim_hello'...
+INFO: [SIM-utils-43] Exported '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/hello.mem'
+INFO: [SIM-utils-43] Exported '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim/microcode.data'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_hello'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+xvlog --incr --relax -L uvm -prj cpu_hello_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_hello -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cpu_hello_tb'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_hello'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_hello_tb_behav xil_defaultlib.cpu_hello_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/steeve/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_hello_tb_behav xil_defaultlib.cpu_hello_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 8201.988 ; gain = 7.004 ; free physical = 1427 ; free virtual = 7817
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/steeve/projects/65c02-soc/vivado/65c02-soc.srcs/utils_1/imports/synth_1/top.dcp with file /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/top.dcp
+launch_runs synth_1 -jobs 2
+[Sat Jul 20 19:49:08 2024] Launched synth_1...
+Run output will be captured here: /home/steeve/projects/65c02-soc/vivado/65c02-soc.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tftg256-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8203.988 ; gain = 0.000 ; free physical = 1439 ; free virtual = 7739
+INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+Finished Parsing XDC File [/home/steeve/projects/65c02-soc/src/constraints/mercury2.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8219.996 ; gain = 0.000 ; free physical = 1387 ; free virtual = 7679
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+close_design

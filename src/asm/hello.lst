@@ -1,0 +1,25 @@
+ca65 V2.19 - Git 03d824e13
+Main file   : hello.s
+Current file: hello.s
+
+000000r 1               .SEGMENT "MYCODE"
+000000r 1               .org $8000
+008000  1               
+008000  1               RESET:
+008000  1               LOOP:
+008000  1  A9 69            LDA #$69
+008002  1  20 08 80         JSR MYSUB
+008005  1  4C 00 80         JMP LOOP
+008008  1               
+008008  1               MYSUB:
+008008  1  8D 00 10         STA $1000
+00800B  1  AD 00 10         LDA $1000
+00800E  1  60               RTS
+00800F  1               
+00800F  1               .SEGMENT "RESETVEC"
+00800F  1               .org $FFFA
+00FFFA  1               
+00FFFA  1  00 00            .word $0000    ; NMI
+00FFFC  1  00 80            .word RESET    ; RESET
+00FFFE  1  00 00            .word $0000    ; BRK
+00FFFE  1               
