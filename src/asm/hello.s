@@ -1,20 +1,22 @@
 .SEGMENT "MYCODE"
 .org $8000
 
-RESET:
-LOOP:
-    LDA #$69
-    JSR MYSUB
-    JMP LOOP
+reset:
+  lda #$ff
+  sta $6002
 
-MYSUB:
-    STA $1000
-    LDA $1000
-    RTS
+  lda #$50
+  sta $6000
+
+loop:
+  ror
+  sta $6000
+
+  jmp loop
 
 .SEGMENT "RESETVEC"
 .org $FFFA
 
     .word $0000    ; NMI
-    .word RESET    ; RESET
+    .word reset    ; RESET
     .word $0000    ; BRK

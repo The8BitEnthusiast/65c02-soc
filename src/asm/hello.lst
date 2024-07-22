@@ -5,21 +5,23 @@ Current file: hello.s
 000000r 1               .SEGMENT "MYCODE"
 000000r 1               .org $8000
 008000  1               
-008000  1               RESET:
-008000  1               LOOP:
-008000  1  A9 69            LDA #$69
-008002  1  20 08 80         JSR MYSUB
-008005  1  4C 00 80         JMP LOOP
-008008  1               
-008008  1               MYSUB:
-008008  1  8D 00 10         STA $1000
-00800B  1  AD 00 10         LDA $1000
-00800E  1  60               RTS
-00800F  1               
-00800F  1               .SEGMENT "RESETVEC"
-00800F  1               .org $FFFA
+008000  1               reset:
+008000  1  A9 FF          lda #$ff
+008002  1  8D 02 60       sta $6002
+008005  1               
+008005  1  A9 50          lda #$50
+008007  1  8D 00 60       sta $6000
+00800A  1               
+00800A  1               loop:
+00800A  1  6A             ror
+00800B  1  8D 00 60       sta $6000
+00800E  1               
+00800E  1  4C 0A 80       jmp loop
+008011  1               
+008011  1               .SEGMENT "RESETVEC"
+008011  1               .org $FFFA
 00FFFA  1               
 00FFFA  1  00 00            .word $0000    ; NMI
-00FFFC  1  00 80            .word RESET    ; RESET
+00FFFC  1  00 80            .word reset    ; RESET
 00FFFE  1  00 00            .word $0000    ; BRK
 00FFFE  1               

@@ -1,43 +1,55 @@
 module via (
     input clk,
+    input rst,
     input [3:0] rs,
     input we,
     input en,
-    input [7:0] di,
-    output [7:0] do,
+    input [7:0] din,
+    output [7:0] dout,
     inout [7:0] pb,
     inout [7:0] pa
 );
 
 reg [7:0] orb, irb, ora, ira, ddrb, ddra, nothing;
 
-assign do = (rs == 4'b0000) ? irb :
-            (rs == 4'b0001) ? ira :
+assign dout = (rs == 4'b0000) ? pb :
+            (rs == 4'b0001) ? pa :
             (rs == 4'b0010) ? ddrb :
             (rs == 4'b0011) ? ddra :
             8'bxxxxxxxx;
 
-always @(posedge clk)
+always @(posedge clk, posedge rst)
 begin
-    if (en)
+    if (rst)
     begin
-        if (we)
+        ddrb <= 8'b00000000; // set all PB pins to inputs
+        ddra <= 8'b00000000; // set all PA pins to inputs
+    end
+    else
+    begin
+        if (en)
         begin
-            case (rs)
-                4'b0000: orb <= di;
-                4'b0001: ora <= di;
-                4'b0010: ddrb <= di;
-                4'b0011: ddra <= di;
-                default: nothing <= di;
-            endcase
-        end
-        else
-        begin
-            case (rs)
-                4'b0000: irb <= pb;
-                4'b0001: ira <= pa;
-                default: nothing <= 0;
-            endcase
+            if (we)
+            begin
+                case (rs)
+                    4'b0000: orb <= din;
+                    4'b0001: ora <= din;
+                    4'b0010: ddrb <= din;
+                    4'b0011: ddra <= din;
+                    default: nothing <= din;
+                endcase
+            end
+            /* input latching not supported yet */
+            /*
+            else
+            begin
+                case (rs)
+                    4'b0000: irb <= pb;
+                    4'b0001: ira <= pa;
+                    default: nothing <= 0;
+                endcase
+            end
+            */
         end
     end
 end
