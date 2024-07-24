@@ -13,14 +13,14 @@
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
 # on-board system oscillator
-# set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {clk}]
+set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {clk}]
 # create_clock -period 20.000 -name sys_clk_pin -waveform {0.000 10.000} [get_ports { clk }];
 
 # set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports {clk_en}]
 
 # this is to avoid critical errors as one of the input pins is connected to a
 # clock input (that's the da_in signal)
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF] 
+# set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF] 
 
 # on-board user LEDs
 # set_property -dict {PACKAGE_PIN M1 IOSTANDARD LVCMOS33} [get_ports {heartbeat}];   # led[0]
@@ -45,7 +45,7 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF]
 #set_property -dict {PACKAGE_PIN E12 IOSTANDARD LVCMOS33} [get_ports {dio[9]}]
 
 # 5V tolerant level shifted I/O
-set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS33} [get_ports {clk}];  # io[0]
+# set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS33} [get_ports {clk}];  # io[0]
 # set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {rd[2]}];  # io[1]
 # set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS33} [get_ports {rd[3]}];  # io[2]
 # set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS33} [get_ports {rd[4]}];  # io[3]

@@ -19,34 +19,20 @@ reset:
   lda #%11100000 ; Set top 3 pins on port A to output
   sta DDRA
 
-  ; perform initialization by instruction as per datasheet
   lda #%00111000 ; Set 8-bit mode; 2-line display; 5x8 font
-  jsr lcd_instruction_nowait
-  jsr delay
-  lda #%00111000 ; Set 8-bit mode; 2-line display; 5x8 font
-  jsr lcd_instruction_nowait
-  jsr delay
-  lda #%00111000 ; Set 8-bit mode; 2-line display; 5x8 font
-  jsr lcd_instruction_nowait
-  jsr delay
-
+  jsr lcd_instruction
   lda #%00001110 ; Display on; cursor on; blink off
-  jsr lcd_instruction_nowait
-  jsr delay
+  jsr lcd_instruction
   lda #%00000110 ; Increment and shift cursor; don't shift display
-  jsr lcd_instruction_nowait
-  jsr delay
+  jsr lcd_instruction
   lda #$00000001 ; Clear display
-  jsr lcd_instruction_nowait
-  jsr delay
+  jsr lcd_instruction
 
   ldx #0
 print:
   lda message,x
   beq loop
   jsr print_char
-  ;jsr short_delay    ; short delay to make sure busy flag is available
-  ;jsr short_delay
   inx
   jmp print
 
@@ -77,7 +63,6 @@ lcdbusy:
 
 lcd_instruction:
   jsr lcd_wait
-lcd_instruction_nowait:
   sta PORTB
   lda #0         ; Clear RS/RW/E bits
   sta PORTA
@@ -89,7 +74,6 @@ lcd_instruction_nowait:
 
 print_char:
   jsr lcd_wait
-print_char_nowait:
   sta PORTB
   lda #RS         ; Set RS; Clear RW/E bits
   sta PORTA
@@ -97,28 +81,6 @@ print_char_nowait:
   sta PORTA
   lda #RS         ; Clear E bits
   sta PORTA
-  rts
-
-delay:
-  ldx #$FF
-  ldy #$FF
-delay_loop1:
-  dey
-  beq end_delay
-delay_loop2:
-  dex              ; 2 clock cycles
-  beq delay_loop1  ; 2 clock cycles (when not taken)
-  jmp delay_loop2  ; 2 clock cycles
-end_delay:
-  rts
-
-short_delay:
-  ldy #$FF
-short_delay_loop:
-  dey
-  beq end_short_delay
-  jmp short_delay_loop
-end_short_delay:
   rts
 
 .SEGMENT "RESETVEC"

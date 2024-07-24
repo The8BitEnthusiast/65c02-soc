@@ -23,6 +23,7 @@ module top (input clk, input RST, inout [7:0] pa, inout [7:0] pb);
         .dout(rom_dout)  // output wire [7 : 0] douta
     );
 
+    // RAM
     ram ram0 (
         .clk(clk),
         .ena(ram_ena),
@@ -37,6 +38,7 @@ module top (input clk, input RST, inout [7:0] pa, inout [7:0] pb);
     assign ram_ena = (ADB<16'h5000) ? 1'b1 : 1'b0;
     assign ram_enb = (AD<16'h5000) ? 1'b1 : 1'b0;
 
+    // instantiate I/O controller #0
     wire mmio0_cs;
     assign mmio0_cs = (ADB[15:12]) == 4'h6 ? 1 : 0;
     mmio_controller mmio0 (
@@ -48,7 +50,7 @@ module top (input clk, input RST, inout [7:0] pa, inout [7:0] pb);
         .mmio_wr_data(DO)
     );
 
-    // create via and attach it to slot #0 (addres $6000)
+    // create via and attach it to slot #0 (address $6000)
     // of IO controller
     via via0 (
         .clk(clk),
