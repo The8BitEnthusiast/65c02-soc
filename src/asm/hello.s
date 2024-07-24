@@ -64,6 +64,7 @@ lcdbusy:
   sta PORTA
   lda #(RW | E)
   sta PORTA
+  jsr short_delay  ; extend enable pulse to satisfy datasheet (>450ns)
   lda PORTB
   and #%10000000
   bne lcdbusy
@@ -83,6 +84,7 @@ lcd_instruction_nowait:
   sta PORTA
   lda #E         ; Set E bit to send instruction
   sta PORTA
+  jsr short_delay  ; extend pulse width to meet datasheet (>450ns)
   lda #0         ; Clear RS/RW/E bits
   sta PORTA
   rts
@@ -95,6 +97,7 @@ print_char_nowait:
   sta PORTA
   lda #(RS | E)   ; Set E bit to send instruction
   sta PORTA
+  jsr short_delay ; extend pulse width to meet datasheet (>450ns)
   lda #RS         ; Clear E bits
   sta PORTA
   rts
@@ -113,7 +116,7 @@ end_delay:
   rts
 
 short_delay:
-  ldy #$FF
+  ldy #$05
 short_delay_loop:
   dey
   beq end_short_delay

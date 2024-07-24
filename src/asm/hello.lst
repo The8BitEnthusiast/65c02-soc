@@ -25,30 +25,30 @@ Current file: hello.s
 00800D  1               
 00800D  1                 ; perform initialization by instruction as per datasheet
 00800D  1  A9 38          lda #%00111000 ; Set 8-bit mode; 2-line display; 5x8 font
-00800F  1  20 82 80       jsr lcd_instruction_nowait
-008012  1  20 AB 80       jsr delay
+00800F  1  20 85 80       jsr lcd_instruction_nowait
+008012  1  20 B4 80       jsr delay
 008015  1  A9 38          lda #%00111000 ; Set 8-bit mode; 2-line display; 5x8 font
-008017  1  20 82 80       jsr lcd_instruction_nowait
-00801A  1  20 AB 80       jsr delay
+008017  1  20 85 80       jsr lcd_instruction_nowait
+00801A  1  20 B4 80       jsr delay
 00801D  1  A9 38          lda #%00111000 ; Set 8-bit mode; 2-line display; 5x8 font
-00801F  1  20 82 80       jsr lcd_instruction_nowait
-008022  1  20 AB 80       jsr delay
+00801F  1  20 85 80       jsr lcd_instruction_nowait
+008022  1  20 B4 80       jsr delay
 008025  1               
 008025  1  A9 0E          lda #%00001110 ; Display on; cursor on; blink off
-008027  1  20 82 80       jsr lcd_instruction_nowait
-00802A  1  20 AB 80       jsr delay
+008027  1  20 85 80       jsr lcd_instruction_nowait
+00802A  1  20 B4 80       jsr delay
 00802D  1  A9 06          lda #%00000110 ; Increment and shift cursor; don't shift display
-00802F  1  20 82 80       jsr lcd_instruction_nowait
-008032  1  20 AB 80       jsr delay
+00802F  1  20 85 80       jsr lcd_instruction_nowait
+008032  1  20 B4 80       jsr delay
 008035  1  A9 01          lda #$00000001 ; Clear display
-008037  1  20 82 80       jsr lcd_instruction_nowait
-00803A  1  20 AB 80       jsr delay
+008037  1  20 85 80       jsr lcd_instruction_nowait
+00803A  1  20 B4 80       jsr delay
 00803D  1               
 00803D  1  A2 00          ldx #0
 00803F  1               print:
 00803F  1  BD 4E 80       lda message,x
 008042  1  F0 07          beq loop
-008044  1  20 95 80       jsr print_char
+008044  1  20 9B 80       jsr print_char
 008047  1                 ;jsr short_delay    ; short delay to make sure busy flag is available
 008047  1                 ;jsr short_delay
 008047  1  E8             inx
@@ -70,65 +70,68 @@ Current file: hello.s
 008064  1  8D 01 60       sta PORTA
 008067  1  A9 C0          lda #(RW | E)
 008069  1  8D 01 60       sta PORTA
-00806C  1  AD 00 60       lda PORTB
-00806F  1  29 80          and #%10000000
-008071  1  D0 EF          bne lcdbusy
-008073  1               
-008073  1  A9 40          lda #RW
-008075  1  8D 01 60       sta PORTA
-008078  1  A9 FF          lda #%11111111  ; Port B is output
-00807A  1  8D 02 60       sta DDRB
-00807D  1  68             pla
-00807E  1  60             rts
-00807F  1               
-00807F  1               lcd_instruction:
-00807F  1  20 5C 80       jsr lcd_wait
-008082  1               lcd_instruction_nowait:
-008082  1  8D 00 60       sta PORTB
-008085  1  A9 00          lda #0         ; Clear RS/RW/E bits
-008087  1  8D 01 60       sta PORTA
-00808A  1  A9 80          lda #E         ; Set E bit to send instruction
-00808C  1  8D 01 60       sta PORTA
-00808F  1  A9 00          lda #0         ; Clear RS/RW/E bits
-008091  1  8D 01 60       sta PORTA
-008094  1  60             rts
-008095  1               
-008095  1               print_char:
-008095  1  20 5C 80       jsr lcd_wait
-008098  1               print_char_nowait:
-008098  1  8D 00 60       sta PORTB
-00809B  1  A9 20          lda #RS         ; Set RS; Clear RW/E bits
-00809D  1  8D 01 60       sta PORTA
-0080A0  1  A9 A0          lda #(RS | E)   ; Set E bit to send instruction
-0080A2  1  8D 01 60       sta PORTA
-0080A5  1  A9 20          lda #RS         ; Clear E bits
-0080A7  1  8D 01 60       sta PORTA
-0080AA  1  60             rts
-0080AB  1               
-0080AB  1               delay:
-0080AB  1  A2 FF          ldx #$FF
-0080AD  1  A0 FF          ldy #$FF
-0080AF  1               delay_loop1:
-0080AF  1  88             dey
-0080B0  1  F0 06          beq end_delay
-0080B2  1               delay_loop2:
-0080B2  1  CA             dex              ; 2 clock cycles
-0080B3  1  F0 FA          beq delay_loop1  ; 2 clock cycles (when not taken)
-0080B5  1  4C B2 80       jmp delay_loop2  ; 2 clock cycles
-0080B8  1               end_delay:
-0080B8  1  60             rts
-0080B9  1               
-0080B9  1               short_delay:
-0080B9  1  A0 FF          ldy #$FF
-0080BB  1               short_delay_loop:
-0080BB  1  88             dey
-0080BC  1  F0 03          beq end_short_delay
-0080BE  1  4C BB 80       jmp short_delay_loop
-0080C1  1               end_short_delay:
+00806C  1  20 C2 80       jsr short_delay  ; extend enable pulse to satisfy datasheet (>450ns)
+00806F  1  AD 00 60       lda PORTB
+008072  1  29 80          and #%10000000
+008074  1  D0 EC          bne lcdbusy
+008076  1               
+008076  1  A9 40          lda #RW
+008078  1  8D 01 60       sta PORTA
+00807B  1  A9 FF          lda #%11111111  ; Port B is output
+00807D  1  8D 02 60       sta DDRB
+008080  1  68             pla
+008081  1  60             rts
+008082  1               
+008082  1               lcd_instruction:
+008082  1  20 5C 80       jsr lcd_wait
+008085  1               lcd_instruction_nowait:
+008085  1  8D 00 60       sta PORTB
+008088  1  A9 00          lda #0         ; Clear RS/RW/E bits
+00808A  1  8D 01 60       sta PORTA
+00808D  1  A9 80          lda #E         ; Set E bit to send instruction
+00808F  1  8D 01 60       sta PORTA
+008092  1  20 C2 80       jsr short_delay  ; extend pulse width to meet datasheet (>450ns)
+008095  1  A9 00          lda #0         ; Clear RS/RW/E bits
+008097  1  8D 01 60       sta PORTA
+00809A  1  60             rts
+00809B  1               
+00809B  1               print_char:
+00809B  1  20 5C 80       jsr lcd_wait
+00809E  1               print_char_nowait:
+00809E  1  8D 00 60       sta PORTB
+0080A1  1  A9 20          lda #RS         ; Set RS; Clear RW/E bits
+0080A3  1  8D 01 60       sta PORTA
+0080A6  1  A9 A0          lda #(RS | E)   ; Set E bit to send instruction
+0080A8  1  8D 01 60       sta PORTA
+0080AB  1  20 C2 80       jsr short_delay ; extend pulse width to meet datasheet (>450ns)
+0080AE  1  A9 20          lda #RS         ; Clear E bits
+0080B0  1  8D 01 60       sta PORTA
+0080B3  1  60             rts
+0080B4  1               
+0080B4  1               delay:
+0080B4  1  A2 FF          ldx #$FF
+0080B6  1  A0 FF          ldy #$FF
+0080B8  1               delay_loop1:
+0080B8  1  88             dey
+0080B9  1  F0 06          beq end_delay
+0080BB  1               delay_loop2:
+0080BB  1  CA             dex              ; 2 clock cycles
+0080BC  1  F0 FA          beq delay_loop1  ; 2 clock cycles (when not taken)
+0080BE  1  4C BB 80       jmp delay_loop2  ; 2 clock cycles
+0080C1  1               end_delay:
 0080C1  1  60             rts
 0080C2  1               
-0080C2  1               .SEGMENT "RESETVEC"
-0080C2  1               .org $FFFA
+0080C2  1               short_delay:
+0080C2  1  A0 05          ldy #$05
+0080C4  1               short_delay_loop:
+0080C4  1  88             dey
+0080C5  1  F0 03          beq end_short_delay
+0080C7  1  4C C4 80       jmp short_delay_loop
+0080CA  1               end_short_delay:
+0080CA  1  60             rts
+0080CB  1               
+0080CB  1               .SEGMENT "RESETVEC"
+0080CB  1               .org $FFFA
 00FFFA  1               
 00FFFA  1  00 00            .word $0000    ; NMI
 00FFFC  1  00 80            .word reset    ; RESET
