@@ -1,3 +1,4 @@
 # vivado project files
 vivado/
 /Makefile
+.DS_Store
