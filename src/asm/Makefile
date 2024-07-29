@@ -1,6 +1,6 @@
 compile:
-	ca65 -l hello.lst --cpu 6502 hello.s
+	ca65 -l wozmon.lst --cpu 65C02 wozmon.s
 
 rom: compile
-	ld65 -C hello.cfg hello.o
-	hexdump -v -e '16/1 "%02x " "\n"' hello.bin > hello.mem
+	ld65 -C wozmon.cfg wozmon.o
+	hexdump -v -e '16/1 "%02x " "\n"' wozmon.bin > wozmon.mem

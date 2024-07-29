@@ -6,7 +6,7 @@ module rom (
 reg [7:0] mem [32767:0];
 
 initial
-    $readmemh("hello.mem", mem);
+    $readmemh("wozmon.mem", mem);
 
 always @(posedge clk)
 begin

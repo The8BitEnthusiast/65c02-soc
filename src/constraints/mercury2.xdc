@@ -45,8 +45,8 @@ set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {clk}]
 #set_property -dict {PACKAGE_PIN E12 IOSTANDARD LVCMOS33} [get_ports {dio[9]}]
 
 # 5V tolerant level shifted I/O
-# set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS33} [get_ports {clk}];  # io[0]
-# set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {rd[2]}];  # io[1]
+set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS33} [get_ports {rx}];  # io[0]
+set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {tx}];  # io[1]
 # set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS33} [get_ports {rd[3]}];  # io[2]
 # set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS33} [get_ports {rd[4]}];  # io[3]
 # set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS33} [get_ports {rd[5]}];  # io[4]

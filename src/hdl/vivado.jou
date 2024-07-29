@@ -1,0 +1,174 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Jul 28 13:21:57 2024
+# Process ID: 4189
+# Current directory: /home/steeve/projects/65c02-soc/src/hdl
+# Command line: vivado
+# Log file: /home/steeve/projects/65c02-soc/src/hdl/vivado.log
+# Journal file: /home/steeve/projects/65c02-soc/src/hdl/vivado.jou
+# Running On: spock, OS: Linux, CPU Frequency: 3457.630 MHz, CPU Physical cores: 4, Host memory: 8317 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/steeve/projects/65c02-soc/vivado/65c02-soc.xpr
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_hello ]
+add_files -norecurse /home/steeve/projects/65c02-soc/src/hdl/reset.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/reset_pwr}} 
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/reset_int}} 
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/reset_int}} 
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_sim
+create_fileset -simset sim_uart
+add_files {/home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/fifo/reg_file.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/uart/baud_gen.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/uart/uart.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/fifo/fifo.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/uart/chu_uart.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/fifo/fifo_ctrl.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/uart/uart_tx.sv /home/steeve/projects/65c02-soc/src/hdl/ece_4305_eddin/uart/uart_rx.sv}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top uart [get_filesets sim_uart]
+set_property top_lib xil_defaultlib [get_filesets sim_uart]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+set_property SOURCE_SET sources_1 [get_filesets sim_uart]
+add_files -fileset sim_uart -norecurse /home/steeve/projects/65c02-soc/src/test/uart_tb.sv
+update_compile_order -fileset sim_uart
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top uart_tb [get_filesets sim_uart]
+set_property top_lib xil_defaultlib [get_filesets sim_uart]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_uart
+set_property -name {xsim.simulate.runtime} -value {1ms} -objects [get_filesets sim_hello]
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+close_sim
+current_fileset -simset [ get_filesets sim_uart ]
+set_property -name {xsim.simulate.runtime} -value {1ms} -objects [get_filesets sim_uart]
+launch_simulation -simset [get_filesets sim_uart ]
+source uart_tb.tcl
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg}
+add_files -fileset sim_uart -norecurse /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+set_property xsim.view /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg [get_filesets sim_uart]
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg}
+current_wave_config {uart_tb_behav.wcfg}
+add_wave {{/uart_tb/DUT/uart_tx_unit/state_reg}} 
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+current_wave_config {uart_tb_behav.wcfg}
+add_wave {{/uart_tb/DUT/baud_gen_unit/tick}} 
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_uart ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_uart/uart_tb_behav.wcfg
+source uart_tb.tcl
+close_sim
+add_files -norecurse /home/steeve/projects/65c02-soc/src/hdl/acia.v
+update_compile_order -fileset sources_1
+current_fileset -simset [ get_filesets sim_hello ]
+launch_simulation -simset [get_filesets sim_hello ]
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+close_sim
+add_files -norecurse /home/steeve/projects/65c02-soc/src/asm/wozmon.mem
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/tx}} 
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/rx}} 
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+current_wave_config {cpu_hello_tb_behav.wcfg}
+add_wave {{/cpu_hello_tb/DUT/acia0/tx_full}} 
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+save_wave_config {/home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg}
+close_sim
+launch_simulation -simset [get_filesets sim_hello ]
+open_wave_config /home/steeve/projects/65c02-soc/vivado/65c02-soc.sim/sim_hello/cpu_hello_tb_behav.wcfg
+source cpu_hello_tb.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
