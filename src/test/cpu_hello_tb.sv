@@ -44,26 +44,29 @@ module cpu_hello_tb();
             pb_dir = 1;
         end
         */
-    #300000
+
+    // you need to adjust the delays that follow below in 
+    // accordance with the baud rate set for the ACIA
+    #1_500_000
 
     rx = 0;      // start bit
-    #8681
+    #52083
     rx = 0;
-    #8681
+    #52083
     rx = 0;
-    #8681
+    #52083
     rx = 0;
-    #8681
+    #52083
     rx = 0;
-    #8681
+    #52083
     rx = 1;
-    #8681
+    #52083
     rx = 1;
-    #8681
+    #52083
     rx = 0;
-    #8681
+    #52083
     rx = 0;
-    #8681
+    #52083
     rx = 1;     // stop bit
 
     end

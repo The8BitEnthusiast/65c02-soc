@@ -4,13 +4,13 @@
 module baud_gen
    (
     input  logic clk, reset,
-    input  logic [10:0] dvsr,
+    input  logic [20:0] dvsr,
     output logic tick
    );
 
    // declaration
-   logic [10:0] r_reg;
-   logic [10:0] r_next;
+   logic [20:0] r_reg;
+   logic [20:0] r_next;
 
    // body
    // register

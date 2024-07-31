@@ -8,7 +8,7 @@ module uart
     input logic clk, reset,
     input logic rd_uart, wr_uart, rx,
     input logic [7:0] w_data,
-    input logic [10:0] dvsr,
+    input logic [20:0] dvsr,
     output logic tx_full, rx_empty, tx,
     output logic [7:0] r_data
    );
