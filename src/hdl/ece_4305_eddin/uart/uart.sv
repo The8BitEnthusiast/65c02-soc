@@ -10,11 +10,14 @@ module uart
     input logic [7:0] w_data,
     input logic [20:0] dvsr,
     output logic tx_full, rx_empty, tx,
-    output logic [7:0] r_data
+    output logic [7:0] r_data,
+    output logic rx_done_tick
    );
 
    // signal declaration
-   logic tick, rx_done_s_tick, tx_done_tick;
+   // correction to declaration to rx_done_tick
+   // logic tick, rx_done_s_tick, tx_done_tick;
+   logic tick, tx_done_tick;
    logic tx_empty, tx_fifo_not_empty;
    logic [7:0] tx_fifo_out, rx_data_out;
 

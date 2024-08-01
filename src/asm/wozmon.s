@@ -1,5 +1,5 @@
 .SEGMENT "MYCODE"
-  .org $ff00
+  .org $f000
 
 XAML  = $24                            ; Last "opened" location Low
 XAMH  = $25                            ; Last "opened" location High
@@ -18,10 +18,13 @@ ACIA_CMD    = $5002
 ACIA_CTRL   = $5003
 
 RESET:
+                CLI                    ; enable interrupts
+                NOP
+                NOP
                 LDA     #$1F           ; 8-N-1, 19200 baud.
                 STA     ACIA_CTRL
-;                LDA     #$0B           ; No parity, no echo, no interrupts.
-;                STA     ACIA_CMD
+                LDA     #$09           ; No parity, no echo, no interrupts.
+                STA     ACIA_CMD
                 LDA     #$1B           ; Begin with escape.
 
 NOTCR:
@@ -191,9 +194,13 @@ ECHO:
                 STA       ACIA_DATA
                 RTS                    ; Return.
 
+INT_HANDLER:
+                BIT    ACIA_STATUS
+                RTI
+
 .SEGMENT "RESETVEC"
   .org $FFFA
 
                 .word   $0F00          ; NMI vector
                 .word   RESET          ; RESET vector
-                .word   $0000          ; IRQ vector
+                .word   INT_HANDLER    ; IRQ vector

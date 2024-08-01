@@ -19,14 +19,16 @@ module top (
     // wire [7:0] ram_doutb;
     //
     wire reset_pwr, reset_int;
+    wire irq_acia, irq;
 
     // Power-on reset module (generates a delayed reset pulse)
     reset rst0 (.clk(clk), .rst(reset_pwr));
     assign reset_int = reset_pwr || RST; 
+    assign irq = irq_acia; // only interrupt source is ACIA for now
 
     cpu cpu0 (.clk(clk), .RST(reset_int), .AD(AD), .sync(sync), 
                 .DI(DI), .DO(DO), 
-                .WE(WE), .IRQ(1'b0), .NMI(1'b0), .RDY(1'b1), .debug(1'b1));
+                .WE(WE), .IRQ(irq), .NMI(1'b0), .RDY(1'b1), .debug(1'b1));
 
     // ROM 
     rom rom0 (
@@ -99,7 +101,8 @@ module top (
         .din(mmio1.slot_wr_data_array[0]),
         .dout(mmio1.slot_rd_data_array[0]),
         .tx(tx),
-        .rx(rx)
+        .rx(rx),
+        .irq(irq_acia)
     );
 
     // drive the data in bus using this memory map:
