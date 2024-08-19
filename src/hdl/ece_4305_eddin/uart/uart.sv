@@ -11,7 +11,8 @@ module uart
     input logic [20:0] dvsr,
     output logic tx_full, rx_empty, tx,
     output logic [7:0] r_data,
-    output logic rx_done_tick
+    output logic rx_done_tick,
+    input logic cts
    );
 
    // signal declaration

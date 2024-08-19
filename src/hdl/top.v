@@ -4,7 +4,10 @@ module top (
     inout [7:0] pa,
     inout [7:0] pb,
     input rx, 
-    output tx);
+    output tx,
+    output rts,
+    input cts
+);
 
     wire [7:0] DO;
     wire [7:0] DI;
@@ -102,6 +105,8 @@ module top (
         .dout(mmio1.slot_rd_data_array[0]),
         .tx(tx),
         .rx(rx),
+        .rts(rts),
+        .cts(1'b0),
         .irq(irq_acia)
     );
 

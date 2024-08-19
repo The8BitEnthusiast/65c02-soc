@@ -9,7 +9,8 @@ module uart_tx
     input  logic tx_start, s_tick,
     input  logic [7:0] din,
     output logic tx_done_tick,
-    output logic tx
+    output logic tx,
+    input  logic cts
    );
 
    // fsm state type 
@@ -52,7 +53,8 @@ module uart_tx
       case (state_reg)
          idle: begin
             tx_next = 1'b1;
-            if (tx_start) begin
+            // mod: added flow control constraint (cts)
+            if (tx_start && ~cts) begin
                state_next = start;
                s_next = 0;
                b_next = din;

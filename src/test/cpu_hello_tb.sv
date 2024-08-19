@@ -13,6 +13,9 @@ module cpu_hello_tb();
     reg rx;
     wire tx;
 
+    localparam BAUD_RATE = 19_200;
+    localparam PERIOD = 10**9 / BAUD_RATE;
+
     assign pb = (pb_dir == 0) ? pb_in : 8'bZZZZZZZZ;
     assign pa = (pa_dir == 0) ? pa_in : 8'bZZZZZZZZ;
 
@@ -45,30 +48,45 @@ module cpu_hello_tb();
         end
         */
 
-    // you need to adjust the delays that follow below in 
-    // accordance with the baud rate set for the ACIA
-    #1_500_000
+    // give time to Wozmon to send the backslash
+    /*
+    #(PERIOD*8*5);
 
-    rx = 0;      // start bit
-    #52083
-    rx = 0;
-    #52083
-    rx = 0;
-    #52083
-    rx = 0;
-    #52083
-    rx = 0;
-    #52083
-    rx = 1;
-    #52083
-    rx = 1;
-    #52083
-    rx = 0;
-    #52083
-    rx = 0;
-    #52083
-    rx = 1;     // stop bit
+    receive_char("8");
+    #(PERIOD*8*1);
+    receive_char("0");
+    #(PERIOD*8*1);
+    receive_char("0");
+    #(PERIOD*8*1);
+    receive_char("0");
+    #(PERIOD*8*1);
+    receive_char("R");
+    #(PERIOD*8*1);
+    receive_char(8'h0D);
+    #(PERIOD*8*1);
+
+    // hit enter after receiving "MEMORY SIZE?"
+    #(PERIOD*8*25);
+    receive_char(8'h0D);
+    */
 
     end
+
+    task receive_char(input [7:0] char);
+    
+        integer i;
+        begin
+            rx = 0;    // start bit
+            #PERIOD;
+            for (i = 0; i <=7; i=i+1)
+            begin
+                rx = char[i];
+                #PERIOD;
+            end
+            rx = 1;   // stop bit
+            #PERIOD;
+        end
+
+    endtask
 
 endmodule

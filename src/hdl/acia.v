@@ -8,6 +8,8 @@ module acia (
     output [7:0] dout,
     output tx,
     input rx,
+    output rts,
+    input cts,
     output irq
 );
 
@@ -26,6 +28,13 @@ wire [20:0] dvsr;   // clock divisor for baud rate generator
 // bit 1 of command register must be cleared to enable receive interrupts
 // assign irq = rx_done_tick & ~cmd_reg[1];
 assign irq = int_flag;
+
+// RTS determined based on bits 3 and 2 of command register
+//   00: RTS high
+//   01: Do not use
+//   10: RTS low
+//   11: RTS low, Transmit break on TxD
+assign rts = (cmd_reg[3:2] == 2'b00) ? 1 : 0;
 
 // assign the appropriate divisor based on selected baud rate
 assign dvsr = (ctrl_reg[3:0] == 4'b0000) ? (CLK_FREQ / (115_200 * 16)) - 1 :
@@ -46,7 +55,8 @@ uart uart0 (
     .rx_empty(rx_empty), 
     .tx(tx),
     .r_data(r_data),
-    .rx_done_tick(rx_done_tick)
+    .rx_done_tick(rx_done_tick),
+    .cts(cts)
 );
 
 assign rd_uart = (en && !we && rs == 2'b00) ? 1'b1 : 1'b0;

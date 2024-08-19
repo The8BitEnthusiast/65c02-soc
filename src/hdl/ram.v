@@ -10,6 +10,9 @@ module ram (
 
 reg [7:0] mem [16383:0];
 
+initial
+    $readmemh("ram.mem", mem);
+
 always @(posedge clk)
 begin
     if (ena)
