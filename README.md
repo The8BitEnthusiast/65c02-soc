@@ -23,13 +23,26 @@ For the 65C02 soft core, Arlet Otten's implementation is really well made and it
 
 The ROM and RAM modules are implemented as Block Memory. At first I used memory IP from Vivado's IP Catalog (my FPGA toolchain), but then, after sifting throught the documentation, I learned that Vivado will infer Block Memory if the Verilog module adheres to a specific structure.
 
-The 65C22 Via module has for now just enough functionality to allow Ben's Hello World code to run. It has the first four registers (PORTB, PORTA, DDRB, DDRA) implemented, and the bi-directional I/O pins have been successfully tested with an LCD display.
+The 65C22 Via module has for now just enough functionality to allow Ben's code samples to run. It has the first four registers (PORTB, PORTA, DDRB, DDRA) implemented, and the bi-directional I/O pins have been successfully tested with an LCD display.
 
 The memory map implemented on the project, as shown below is consistent with Ben's design.
 
 ![MemoryMap](https://github.com/The8BitEnthusiast/65c02-soc/blob/main/images/memorymap/memorymap.png?raw=true)
 
-## Performance Tests
+For the serial communications soft core, I took a deep dive into the 65C51 ACIA's architecture and managed to replicate enough of its functionality to allow Ben's version of MS-Basic to run natively on my 6502 SoC project. Features supported so far:
+
+- Programmable baud rate
+- Interrupts on receive
+- Buffered transmit and receive
+- Hardware flow control (RTS and CTS)
+- No transmision bug - the status register tells you if the transmission queue has room or not
+
+Not duplicating the WDC 65C51's transmission status 'bug' has allowed me to modify Ben's transmission code to check the tx status flag instead of generating a delay. I also incorporated the LCD routines to his BIOS to help with troubleshooting when the serial interface did not cooperate. Very handy.
+
+To establish serial communications between the FPGA board and a computer, I used this [LCD234X USB to UART module](https://ftdichip.com/wp-content/uploads/2020/07/DS_LC234X.pdf) made by FTDI. There are plenty of other alternatives that perform the same function out there.
+
+
+## Hello World Performance Tests
 
 I was curious to know how fast Ben's "Hello World" code would run in this setup. For initial rounds of tests, and to make debugging manageable, I initially drove the implemented modules with an external clock. The only change I had made to Ben's code at that point was to implement the LCD's initialization by instruction as prescribed in the data sheet, which mostly consisted of adding a delay between init commands. I quickly got to the maximum frequency my function generator could produce, 4Mhz, with no issue at all.
 
@@ -41,4 +54,5 @@ I initially thought I was hitting the limit of breadboard I/O bandwidth, but no,
 
 ## Next Steps
 
-Serial communications is next with an emulation of the 65C51 ACIA. Also looking forward to running Wozmon and MS-Basic at 50Mhz! ;-)
+VGA output is next on the radar. I had already replicated Ben's VGA circuit on my FPGA board in a [previous experiment](https://github.com/The8BitEnthusiast/vga-on-fpga). For the next round, I intend to expand its capabilities with higher resolutions and explore how sprites work.
+
