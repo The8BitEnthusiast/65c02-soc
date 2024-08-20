@@ -11,7 +11,7 @@ Features include:
 * Block memory based ROM and RAM modules
 * A memory mapped I/O subsystem that includes the following I/O cores:
     * An emulated 65C22 Versatile Interface Adapter (VIA)
-    * (On the roadmap) Serial interface (code compatible with the 65C51 ACIA)
+    * An emulated 65C51 Asynchronous Communications Interface Adapter 
 
 ## Design
 
